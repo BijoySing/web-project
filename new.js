@@ -1,2 +1,0 @@
-shamim
-ok vai
