@@ -7,6 +7,7 @@
 </head>
 <body>
 <%
+
 	String teacher=request.getParameter("teacher");
 	String course=request.getParameter("course");
 
