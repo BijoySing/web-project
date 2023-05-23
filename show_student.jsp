@@ -7,26 +7,25 @@
 </head>
 <body>
 <%
-	String student_reg= request.getParameter("student_reg");
+
+	
 	try{
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","shamim");
-	String query="SELECT course,reg from reg_course";
+	String query="SELECT course,teacher FROM course";
 	Statement statement= connection.createStatement();
 
 	ResultSet set= statement.executeQuery(query);
 	//response.sendRedirect("index.html");
 	while(set.next())
 	{
-		String te=set.getString("course");
-		String course=set.getString("reg");
-		if(te.equals(student_reg))
-			{
-			out.println(course+"<br>");
-			}
+		String columnData=set.getString("course");
+		String te=set.getString("teacher");
+		out.println(columnData+"->"+te+"<br>");
 		
 	}
 	
+	out.println("<h3>For course registration, Go back</h3> ");
 	}
 	catch(Exception e)
 	{
