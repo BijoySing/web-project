@@ -7,6 +7,7 @@
 </head>
 <body>
 <%
+
    String newCourse = request.getParameter("nc");
    String reg=request.getParameter("reg");
 	try{
