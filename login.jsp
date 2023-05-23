@@ -7,6 +7,7 @@
 </head>
 <body>
 <%
+
 	String un=request.getParameter("un");
 	String pwd=request.getParameter("pwd");
 	String typ=request.getParameter("typ");
