@@ -7,6 +7,7 @@
 </head>
 <body>
 <%
+
 	String name= request.getParameter("course_list");
 	try{
 	Class.forName("com.mysql.cj.jdbc.Driver");
